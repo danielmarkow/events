@@ -4,10 +4,11 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged
-} from "firebase/auth"
-import {auth} from "../firebaseConfig"
+} from "firebase/auth";
 
-export const UserContext = createContext()
+import {auth} from "../firebaseConfig";
+
+export const UserContext = createContext();
 
 export function UserContextProvider(props) {
 
@@ -17,8 +18,7 @@ export function UserContextProvider(props) {
 
   const [currentUser, setCurrentUser] = useState();
   const [loadingData, setLoadingData] = useState(true);
-  // TODO remove before flight!
-  console.log("MAJ", currentUser);
+
   useEffect(() => {
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

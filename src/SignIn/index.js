@@ -20,7 +20,7 @@ export default function SignIn() {
     });
 
     async function onSubmit(data) {
-        console.log(data);
+        // console.log(data);
         try {
             const cred = await signIn(
                 data.loginEmail,
