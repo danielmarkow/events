@@ -42,9 +42,9 @@ export default function SignUp() {
     }
 
     return (
-        <>
-            <h1>Sign up</h1>
+        <section>
             <form onSubmit={handleSubmit(onSubmit)}>
+                <h1>Sign up</h1>
                 <label
                     htmlFor="signUpEmail"
                 >Email Address</label>
@@ -74,6 +74,6 @@ export default function SignUp() {
                 <p>{errors.signUpPwRepeat?.message}</p>
                 <button type="submit">Submit</button>
             </form>
-        </>
+        </section>
     );
 }

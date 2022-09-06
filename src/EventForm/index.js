@@ -83,9 +83,10 @@ function EventForm() {
   }
 
   return (
-      <div className="container">
-        <h1>Create Event</h1>
+      <>
+      <section>
         <form onSubmit={handleSubmit(onSubmit)}>
+        <h2>Create Event</h2>
           <div>
             <label
                 htmlFor="name"
@@ -341,7 +342,8 @@ function EventForm() {
           </div>
           <button type="submit">Submit</button>
         </form>
-      </div>
+      </section>
+      </>
   );
 }
 

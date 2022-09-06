@@ -1,4 +1,4 @@
-import {useNavigate, Outlet, Navigate} from "react-router-dom";
+import {useNavigate, Navigate} from "react-router-dom";
 
 import {useContext} from "react";
 import {UserContext} from "../context/userContext";
@@ -12,13 +12,17 @@ function Admin() {
     }
 
     return (
-        <div className="container">
-            <h1>Admin</h1>
-            <button
-                className="btn btn-primary"
-                onClick={() => navigate("/admin/create-event")}>Create Event</button>
-            <Outlet />
-        </div>
+        <>
+          <section>
+              <h1>Admin</h1>
+          </section>
+          <section>
+            <div>
+              <button
+                  onClick={() => navigate("/admin/create-event")}>Create Event</button>
+            </div>
+          </section>
+        </>
     );
 }
 

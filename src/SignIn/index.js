@@ -33,9 +33,9 @@ export default function SignIn() {
     }
 
     return (
-    <>
-        <h1>Sign In</h1>
+    <section>
         <form onSubmit={handleSubmit(onSubmit)}>
+            <h1>Sign In</h1>
             <label
                 htmlFor="loginEmail"
             >Email</label>
@@ -56,6 +56,6 @@ export default function SignIn() {
             <p>{errors.loginPw?.message}</p>
             <button type="submit">Submit</button>
         </form>
-    </>
+    </section>
     );
 }

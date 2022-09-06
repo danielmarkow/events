@@ -27,21 +27,19 @@ function EventList() {
   }
 
   return (
-      <div id="events-container">
-        <div>
+        <section>
           {Object.keys(events).map((key) => (
-              <div key={key}>
+              <aside key={key}>
                   <strong>{events[key].eventAttendanceMode}</strong>
                   <h3>{events[key].name}</h3>
                   <div>{events[key].startDate}</div>
-                  <p>{events[key].description}</p>
+                  <p style={{ overflowWrap: "break-word"}}>{events[key].description}</p>
                   <button
                       onClick={() => navigate("/" + key)}
                   >Event Details</button>
-              </div>
+              </aside>
           ))}
-        </div>
-      </div>
+        </section>
   );
 }
 

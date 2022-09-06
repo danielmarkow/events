@@ -23,11 +23,10 @@ export default function Navbar() {
     return (
        <>
             <nav>
-                <div>
-                    <a
-                        onClick={() => navigate("/")}
-                    >Events</a>
                     <ul>
+                        <li
+                            onClick={() => navigate("/")}
+                        >Events</li>
                         {!currentUser && <li>
                             <a
                                 aria-current="page"
@@ -51,7 +50,6 @@ export default function Navbar() {
                             >Admin</a>
                         </li>}
                     </ul>
-                </div>
             </nav>
        </>
     );
