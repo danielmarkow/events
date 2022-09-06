@@ -58,7 +58,7 @@ function EventForm() {
       addressLocality: data.addressLocality,
       addressPostalCode: data.addressPostalCode,
       addressRegion: data.addressRegion,
-      description: data.addressRegion,
+      description: data.description,
       offersUrl: data.offersUrl,
       offersPrice: data.offersPrice,
       offersAvailability: data.offersAvailability,
@@ -123,7 +123,7 @@ function EventForm() {
           <div>
             <label
                 htmlFor="endDate"
-            >Start Date</label>
+            >End Date</label>
             <input
                 id="endDate"
                 type="datetime-local"
