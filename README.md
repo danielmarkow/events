@@ -13,3 +13,4 @@ Publish events in an SEO optimized way
 - Include Google data structure ( )
 - Sort event list -> next event on top ( )
   - Custom Sort
+- Check if startDate is prior to endDate in validation ( )

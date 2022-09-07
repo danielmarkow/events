@@ -48,8 +48,8 @@ function EventForm() {
     const eventId = uuidv4();
     set(ref(database, 'events/' + eventId), {
       name: data.name,
-      startDate: String(data.startDate),
-      endDate: String(data.endDate),
+      startDate: data.startDate.toLocaleString("de-DE"),
+      endDate: data.endDate.toLocaleString("de-DE"),
       eventAttendanceMode: data.eventAttendanceMode,
       eventStatus: data.eventStatus,
       locationType: data.locationType,
@@ -62,7 +62,7 @@ function EventForm() {
       offersUrl: data.offersUrl,
       offersPrice: data.offersPrice,
       offersAvailability: data.offersAvailability,
-      offersValidFrom: data.offersValidFrom,
+      offersValidFrom: data.offersValidFrom.toLocaleString("de-DE"),
       performerType: data.performerType,
       performerName: data.performerName,
       organizerType: data.organizerType,
