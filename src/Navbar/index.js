@@ -24,31 +24,44 @@ export default function Navbar() {
        <>
             <nav>
                     <ul>
-                        <li
-                            onClick={() => navigate("/")}
-                        >Events</li>
-                        {!currentUser && <li>
-                            <a
-                                aria-current="page"
-                                onClick={() => navigate("/signup")}
-                            >Sign Up</a>
-                        </li>}
-                        {!currentUser && <li>
-                            <a
-                                aria-current="page"
-                                onClick={() => navigate("/signin")}
-                            >Sign In</a>
-                        </li>}
-                        {currentUser && <li>
-                            <a
-                                onClick={logOut}
-                            >Log Out</a>
-                        </li>}
-                        {currentUser && <li>
-                            <a
-                                onClick={() => navigate("/admin")}
-                            >Admin</a>
-                        </li>}
+                      <div style={{ display: "flex"}}>
+                        <div style={{borderRight: "2px solid black", marginRight: "1vw"}}>
+                          <li
+                              className="navitem"
+                              onClick={() => navigate("/")}
+                          >Events</li>
+                        </div>
+                        <div>
+                          {!currentUser && <li
+                              className="navitem"
+                              onClick={() => navigate("/signup")}
+                          >
+
+
+                              Sign Up
+                          </li>}
+                          {!currentUser && <li
+                              className="navitem"
+                              onClick={() => navigate("/signin")}
+                          >
+
+                              Sign In
+                          </li>}
+                          {currentUser && <li
+                              className="navitem"
+                              onClick={logOut}
+                          >
+                              Log Out
+                          </li>}
+                          {currentUser && <li
+                              className="navitem"
+                              onClick={() => navigate("/admin")}
+                          >
+                              Admin
+                          </li>}
+
+                        </div>
+                      </div>
                     </ul>
             </nav>
        </>

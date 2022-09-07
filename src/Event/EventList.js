@@ -33,7 +33,8 @@ function EventList() {
                   <strong>{events[key].eventAttendanceMode}</strong>
                   <h3>{events[key].name}</h3>
                   <div>{events[key].startDate}</div>
-                  <p style={{ overflowWrap: "break-word"}}>{events[key].description}</p>
+                  {/* TODO add short description field?*/}
+                  <p>{events[key].description.slice(0,100) + "..."}</p>
                   <button
                       onClick={() => navigate("/" + key)}
                   >Event Details</button>
