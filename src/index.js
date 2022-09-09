@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { BrowserRouter } from 'react-router-dom';
-import { UserContextProvider } from './context/userContext';
+import {BrowserRouter} from 'react-router-dom';
+import {UserContextProvider} from './context/userContext';
 
 import "mvp.css/mvp.css"
 import './index.css';

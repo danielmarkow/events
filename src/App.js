@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Admin from "./Admin";
-import EventForm from "./EventForm";
+import EventForm from "./EventForm/EventForm";
 import EventList from "./Event/EventList";
 import EventDetail from "./Event/EventDetail";
 

@@ -87,7 +87,6 @@ function EventForm() {
       <section>
         <form onSubmit={handleSubmit(onSubmit)}>
         <h2>Create Event</h2>
-          <div>
             <label
                 htmlFor="name"
             >Event Name</label>
@@ -97,20 +96,14 @@ function EventForm() {
                 {...register("name")}
             />
             <p>{errors.name?.message}</p>
-          </div>
-          <div>
             <label
             >Attendance Mode</label>
-            <div>
               <select {...register("eventAttendanceMode")}>
                 <option value="OfflineEventAttendanceMode">Offline</option>
                 <option value="OnlineEventAttendanceMode">Online</option>
                 <option value="MixedEventAttendanceMode">Mixed</option>
               </select>
-            </div>
             <p>{errors.eventAttendanceMode?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="startDate"
             >Start Date</label>
@@ -120,8 +113,6 @@ function EventForm() {
                 {...register("startDate")}
             />
             <p>{errors.startDate?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="endDate"
             >End Date</label>
@@ -131,11 +122,8 @@ function EventForm() {
                 {...register("endDate")}
             />
             <p>{errors.endDate?.message}</p>
-          </div>
-          <div>
             <label
             >Event Status</label>
-            <div>
               <select {...register("eventStatus")}>
                 <option value="EventScheduled">Scheduled</option>
                 <option value="EventRescheduled">Rescheduled</option>
@@ -144,13 +132,9 @@ function EventForm() {
                 {/*TODO EventCancelled correct?*/}
                 <option value="EventCancelled">Cancelled</option>
               </select>
-            </div>
             <p>{errors.eventStatus?.message}</p>
-          </div>
-          <div>
             <label
             >Location Type</label>
-            <div>
               <select {...register("locationType")}>
                 <option value="entertainmentBusiness">Entertainment Business</option>
                 <option value="exerciseCourse">Exercise Course</option>
@@ -164,10 +148,7 @@ function EventForm() {
                 <option value="toLocation">To Location</option>
                 <option value="workLocation">Work Location</option>
               </select>
-            </div>
             <p>{errors.eventStatus?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="locationName"
             >Location Name</label>
@@ -177,8 +158,6 @@ function EventForm() {
                 {...register("locationName")}
             />
             <p>{errors.locationName?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="addressStreetAddress"
             >Street Address</label>
@@ -188,8 +167,6 @@ function EventForm() {
                 {...register("addressStreetAddress")}
             />
             <p>{errors.addressStreetAddress?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="addressLocality"
             >Address Locality</label>
@@ -199,8 +176,6 @@ function EventForm() {
                 {...register("addressLocality")}
             />
             <p>{errors.addressLocality?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="addressPostalCode"
             >Address Postal Code</label>
@@ -210,8 +185,6 @@ function EventForm() {
                 {...register("addressPostalCode")}
             />
             <p>{errors.addressPostalCode?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="addressRegion"
             >Address Region</label>
@@ -221,8 +194,6 @@ function EventForm() {
                 {...register("addressRegion")}
             />
             <p>{errors.addressRegion?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="description"
             >Event Description</label>
@@ -231,8 +202,6 @@ function EventForm() {
                 {...register("description")}
             ></textarea>
             <p>{errors.description?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="offersUrl"
             >Offers Url</label>
@@ -242,8 +211,6 @@ function EventForm() {
                 {...register("offersUrl")}
             />
             <p>{errors.offersUrl?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="offersPrice"
             >Offers Price (€)</label>
@@ -253,12 +220,9 @@ function EventForm() {
                 {...register("offersPrice")}
             />
             <p>{errors.offersPrice?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="offersAvailability"
             >Offers Availability</label>
-            <div>
               <select {...register("offersAvailability")}>
                 <option value="BackOrder">BackOrder</option>
                 <option value="Discontinued">Discontinued</option>
@@ -271,9 +235,6 @@ function EventForm() {
                 <option value="PreSale">PreSale</option>
                 <option value="SoldOut">SoldOut</option>
               </select>
-            </div>
-          </div>
-          <div>
             <label
                 htmlFor="offersValidFrom"
             >Offer Valid From</label>
@@ -283,19 +244,13 @@ function EventForm() {
                 {...register("offersValidFrom")}
             />
             <p>{errors.offersValidFrom?.message}</p>
-          </div>
-          <div>
             <label
             >Performer Type</label>
-            <div>
               <select {...register("performerType")}>
                 <option value="PerformingGroup">PerformingGroup</option>
                 <option value="MusicGroup">MusicGroup</option>
               </select>
-            </div>
             <p>{errors.performerType?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="performerName"
             >Performer Name</label>
@@ -305,20 +260,14 @@ function EventForm() {
                 {...register("performerName")}
             />
             <p>{errors.performerName?.message}</p>
-          </div>
-          <div>
             <label
             >Organizer Type</label>
-            <div>
               <select {...register("organizerType")}>
                 <option value="Test1">Test1</option>
                 <option value="Test2">Test2</option>
               {/*  TODO add missing options*/}
               </select>
-            </div>
             <p>{errors.organizerType?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="organizerName"
             >Organizer Name</label>
@@ -328,8 +277,6 @@ function EventForm() {
                 {...register("organizerName")}
             />
             <p>{errors.organizerName?.message}</p>
-          </div>
-          <div>
             <label
                 htmlFor="organizerUrl"
             >Link Organizer</label>
@@ -339,7 +286,6 @@ function EventForm() {
                 {...register("organizerUrl")}
             />
             <p>{errors.organizerUrl?.message}</p>
-          </div>
           <button type="submit">Submit</button>
         </form>
       </section>
